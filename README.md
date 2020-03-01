@@ -37,13 +37,15 @@
 
 #### 1.2 Описание установки мини-проекта
 
-Для работы с приложением, в Вашей операционной системе должна быть установлена служебная программа командной строки, поддерживающая протокол передачи гипертекста HTTP. (Ниже приведены примеры запросов с помошью инструмента [cURL](https://curl.haxx.se/)). Также для запуска приложения потребуется менеджер библиотек [Bundler](https://bundler.io/)).
+Для работы с приложением, в Вашей операционной системе должна быть установлена служебная программа командной строки, поддерживающая протокол передачи гипертекста HTTP. (Ниже приведены примеры запросов с помошью инструмента [cURL](https://curl.haxx.se/)). Также для запуска приложения потребуется менеджер библиотек [Bundler](https://bundler.io/).
 
   - скопируйте приложение из репозитория
 
-    `git clone `
+    `git clone https://github.com/occmium/apistorebasket.git`
 
   - переключитесь на созданную дирректорию
+
+    `cd apistorebasket`
 
   - скачайте менеджер библиотек
 
@@ -69,19 +71,19 @@
 
     1 . Получение списка продуктов **GET /api/products**
 
-        `curl -X GET http://localhost:3000/api/products`
+    `curl -X GET http://localhost:3000/api/products`
 
     2 . Добавление продукта в корзину **POST /api/cart**
 
-        `curl --data "product_id=<YOUR_PRODUCT_ID>&quantity=<YOUR_QUANTITY>" http://localhost:3000/api/cart`
+    `curl --data "product_id=<YOUR_PRODUCT_ID>&quantity=<YOUR_QUANTITY>" http://localhost:3000/api/cart`
 
     3 . Удаление продукта из корзины **DELETE /api/cart/{product_id}**
 
-        `curl -X DELETE http://localhost:3000/api/cart/<YOUR_PRODUCT_ID>`
+    `curl -X DELETE http://localhost:3000/api/cart/<YOUR_PRODUCT_ID>`
 
     4 . Получение информации о корзине **GET /api/cart**
 
-        `curl -X GET http://localhost:3000/api/cart`
+    `curl -X GET http://localhost:3000/api/cart`
 
 program|version
 :---:|:---:
